@@ -32,11 +32,11 @@ def main_pipeline(url):
         hand = html2text.HTML2Text()
         # body = html_content.find("div",{"id":"body"}).text
         body = html_content.find("body").text
-        print("body:", body)
+#         print("body:", body)
         body_tag = hand.handle(body)
     except Exception as ex:
         print('Exception error occured in main_pipeline', ex)
-    # return body, body_tag
+    return body_tag
 
 
 # if __name__ == "__main__":
